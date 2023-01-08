@@ -41,7 +41,7 @@ do {
     if (b === '0') {
         if (OPERATIONS.div[0] === operation) {
             do {
-                if(b === '0'){
+                if (b === '0') {
                     alert('На НОЛЬ ділити не можна!')
                 }
                 b = prompt('Введіть ДРУГЕ число');
@@ -94,8 +94,11 @@ function calculate (a, b, operation) {
             }
         }
     }
+    if (Number.isInteger(result)) {
+        return result;
 
-    return result;
+    }
+    return result.toFixed(1)
 }
 
 alert(calculate(+a, +b, operation))
