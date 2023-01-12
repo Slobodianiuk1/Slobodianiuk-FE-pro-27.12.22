@@ -3,15 +3,14 @@ let year, city, favoriteSport;
 year = prompt('Вкажіть дату свого народження', '1999 р.');
 if (year === null || !year) {
     alert('Шкода, що Ви не захотіли ввести свою дату народження');
+} else {
+    alert( `Ви народилися ${year}`);
 }
 
 city = prompt('Вкажіть місто в кому живете', 'Лондон');
 if (city === null || !city) {
-    alert('Шкода, що Ви не захотіли ввести свою дату народження');
-}
-
-if (city !== null && city) {
-
+    alert('Шкода, що Ви не захотіли ввести місце проживання');
+} else {
     city = capitalize(city)
 
     switch (city) {
@@ -32,21 +31,23 @@ if (city !== null && city) {
 
 favoriteSport = prompt('Вкажіть ваш улюблений вид спорту', 'Футбол');
 if (favoriteSport === null || !favoriteSport) {
-    alert('Шкода, що Ви не захотіли ввести свою дату народження');
-}
+    alert('Шкода, що Ви не захотіли ввести свій улюблений спорт');
+} else {
+    favoriteSport = capitalize(favoriteSport)
 
-switch (favoriteSport) {
-    case 'Футбол':
-        alert('Круто! Хочеш стати як Лионель Месси');
-        break;
-    case 'Баскетбол':
-        alert('Круто! Хочеш стати як Майкл Джордан');
-        break;
-    case 'Хокей':
-        alert('Круто! Хочеш стати як Вейн Ґрецкі');
-        break;
-    default:
-        break;
+    switch (favoriteSport) {
+        case 'Футбол':
+            alert('Круто! Хочеш стати як Лионель Месси');
+            break;
+        case 'Баскетбол':
+            alert('Круто! Хочеш стати як Майкл Джордан');
+            break;
+        case 'Хокей':
+            alert('Круто! Хочеш стати як Вейн Ґрецкі');
+            break;
+        default:
+            break;
+    }
 }
 
 function capitalize (str) {
