@@ -1,11 +1,17 @@
 let year, city, favoriteSport;
 
-year = prompt('Вкажіть дату свого народження', '1999 р.');
-if (year === null || !year) {
-    alert('Шкода, що Ви не захотіли ввести свою дату народження');
-} else {
-    alert( `Ви народилися ${year}`);
-}
+do {
+    year = prompt('Вкажіть дату свого народження (Тільки цифри)', '1999');
+    if (year === null || !year) {
+        alert('Шкода, що Ви не захотіли ввести свою дату народження');
+    } else if (isNaN(year)) {
+        alert('Введіть тільки цифри!')
+    } else {
+        year = year.trim()
+        alert(`Ви народилися ${year}`);
+    }
+} while (isNaN(year))
+
 
 city = prompt('Вкажіть місто в кому живете', 'Лондон');
 if (city === null || !city) {
