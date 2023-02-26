@@ -1,0 +1,115 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 10px;
+    margin: 0 auto;
+}
+
+form {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+@media (max-width: 400px) {
+    form {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+.button-block {
+    display: flex;
+}
+
+#newItemInput {
+    padding: 10px 20px;
+    width: 100%;
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+.add-button {
+    background-color: #4CAF50;
+    color: white;
+    margin-right: 10px;
+}
+
+.remove-button {
+    background-color: #f44336;
+    color: white;
+    user-select: none;
+}
+
+.added-item {
+    background-color: #f1f1f1;
+    padding: 20px;
+    margin-top: 20px;
+    user-select: none;
+}
+
+#list {
+    list-style: none;
+    padding: 0;
+    width: 100%;
+}
+
+.selected-item {
+    background-color: #579d3b;
+    color: white;
+}
+
+.container-block {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+#count-list {
+    color: white;
+    padding: 10px;
+    font-size: 16px;
+    background-color: #4141ad;
+    border-radius: 10px;
+    font-family: sans-serif;
+    user-select: none;
+}
+
+.delete-all {
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-size: 16px;
+    background-color: #4141ad;
+    cursor: pointer;
+    user-select: none;
+}
+
+.deleteIsCompleted {
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-size: 16px;
+    background-color: #4141ad;
+    cursor: pointer;
+    user-select: none;
+}
+
+.button-disabled {
+    background-color: rgba(47, 47, 47, 0.44);
+    cursor: auto;
+}
