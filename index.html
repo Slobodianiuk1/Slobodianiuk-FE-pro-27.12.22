@@ -1,10 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+	<meta charset="UTF-8">
+	<title>Title</title>
+	<link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
+<main>
+	<section>
+		<div class="container">
+			<form>
+				<input type="text" placeholder="Enter text" id="newItemInput" oninput="handlerChengeInput()">
+				<div class="button-block">
+					<button class="button add-button button-disabled"
+							id="addButton"
+							onclick="addButtonClicked(event)"
+							disabled="disabled"
+					>
+						Add
+					</button>
+					<button class="button remove-button button-disabled" id="removeButton"
+							onclick="removeButtonClicked(event)"
+							disabled="disabled">
+						Remove
+					</button>
+				</div>
+			</form>
+			<ul id="list"></ul>
+			<div class="container-block">
+				<div id="count-list">
+					List is empty
+				</div>
+				<div>
+					<button class="deleteIsCompleted button-disabled"
+							onclick="checkIsCompleted()"
+							disabled="disabled"
+					>Selected to delete
+					</button>
+					<button class="delete-all button-disabled"
+							onclick="deleteAll()"
+							disabled="disabled">Delete all
+					</button>
+				</div>
+
+			</div>
+		</div>
+	</section>
+</main>
 <script src="./js/script.js"></script>
 </body>
 </html>
