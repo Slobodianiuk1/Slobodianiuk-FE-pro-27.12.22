@@ -1,3 +1,46 @@
+const tasks = [
+	{id: 1, title: 'Task 1', completed: false},
+	{id: 2, title: 'Task 2', completed: true},
+];
+
+
+function renderList () {
+	tasks.forEach(el => {
+		const list = document.getElementById("list");
+		// const inputValue = document.getElementById('newItemInput').value.trim();
+
+		const newItem = document.createElement("li");
+		newItem.textContent = el.title;
+		newItem.classList.add('added-item');
+
+		list.appendChild(newItem);
+
+		newItem.addEventListener('click', function () {
+			this.classList.toggle('selected-item');
+			checkListLength()
+		});
+	})
+}
+
+renderList()
+
+class Task {
+	constructor(id, title, completed = false) {
+		this.id = id;
+		this.title = title;
+		this.completed = completed;
+	}
+
+	toggleCompleted() {
+		this.completed = !this.completed;
+	}
+}
+function addItem () {
+	const inputValue = document.getElementById('newItemInput').value.trim();
+	let task = new Task
+	tasks.push[...]
+}
+
 function addButtonClicked (event) {
 	event.preventDefault();
 
@@ -67,3 +110,4 @@ function checkIsCompleted () {
 	selectedItems.forEach(el => el.remove());
 	checkListLength();
 }
+
