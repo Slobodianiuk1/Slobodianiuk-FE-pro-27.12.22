@@ -1,0 +1,213 @@
+#main {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 20px;
+}
+
+.card {
+    width: 300px;
+    height: 500px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.card h3 {
+    padding: 10px;
+    display: inline-block;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    background-color: #ccc;
+}
+
+.card p {
+    display: block;
+    padding: 10px 20px;
+    font-size: 18px;
+    color: green;
+    font-weight: bold;
+}
+
+.card .btn-info {
+    margin-top: auto;
+    width: 100%;
+    padding: 10px 30px;
+    color: white;
+    background-color: #333333;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+/*HEADER*/
+
+
+#header {
+    margin-bottom: 20px;
+    padding: 20px;
+    list-style: none;
+    display: flex;
+    gap: 10px;
+    background-color: #333333;
+}
+
+
+#header div {
+    transition: all .3s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 18px;
+    height: 30px;
+    color: #333;
+    padding: 5px 10px;
+    border-radius: 5px;
+    background-color: #ccc;
+}
+
+#header .active {
+    background-color: rgba(85, 162, 43, 0.66);
+    color: white;
+}
+
+
+#header div:hover {
+    background-color: rgb(101, 96, 96);
+    color: #fff;
+}
+
+/*POPUP*/
+#popup {
+    display: none;
+}
+
+#popup.active {
+    cursor: pointer;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    padding: 20px;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(51, 51, 51, 0.8);
+}
+
+#popup .container-popup {
+    cursor: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 30px;
+    flex: 50%;
+    border-radius: 5px;
+    background-color: white;
+    max-width: 700px;
+    height: 600px;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
+}
+
+#popup .header-popup {
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    font-size: 24px;
+    justify-content: space-between;
+    width: 100%;
+    gap: 30px;
+}
+
+
+#popup .content-popup {
+    display: flex;
+    padding: 20px;
+    gap: 30px;
+
+}
+
+#popup .content-popup .description {
+    font-size: 20px;
+}
+
+#popup .content-popup .img img {
+    width: 200px;
+}
+
+
+#popup .header-popup .close {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: black;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+
+}
+
+#popup .btn-buy {
+    border-radius: 5px;
+    border: 0;
+    background: green;
+    padding: 20px;
+    min-width: 300px;
+    margin: 0 auto;
+    color: white;
+    font-weight: 700;
+    font-size: 32px;
+    cursor: pointer;
+}
+
+/*INFO BUY*/
+
+.container-buy_info {
+    max-width: 500px;
+    font-size: 30px;
+    position: fixed;
+    padding: 50px;
+    bottom: 30px;
+    left: 30px;
+    color: white;
+    border-radius: 5px;
+    background: rgba(0, 0, 0, 0.75);
+}
+
+@media only screen and (max-width: 555px) {
+    #popup .content-popup {
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+
+.hide {
+    display: none;
+}
+
+span {
+    display: flex;
+    align-items: center;
+    font-size: 28px;
+    padding:  20px;
+    color: black;
+    background-color: #cccccc;
+}
