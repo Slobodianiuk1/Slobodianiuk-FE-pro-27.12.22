@@ -16,7 +16,7 @@ function search (input, remove) {
 					listCard[i].classList.remove('hide')
 					let str = listTitle[i].innerText
 					let res = insertMark(str.toLowerCase(), listTitle[i].innerText.toLowerCase().search(val), val.length)
-					listTitle[i].innerHTML = capitalize(res)
+					listTitle[i].innerHTML = res
 
 				}
 			})
@@ -32,15 +32,4 @@ function search (input, remove) {
 
 function insertMark (string, pos, len) {
 	return string.slice(0, pos) + '<mark>' + string.slice(pos, pos + len) + '</mark>' + string.slice(pos + len)
-}
-
-function capitalize (str) {
-	const arr = str.split(' ');
-	const newArr = [];
-	arr.forEach((item) => {
-		const word = item[0].toUpperCase() + item.slice(1);
-		newArr.push(word);
-	})
-	const newString = newArr.join(' ');
-	return newString;
 }

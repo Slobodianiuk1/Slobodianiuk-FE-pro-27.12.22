@@ -34,6 +34,10 @@
     background-color: #ccc;
 }
 
+.card h3:first-letter {
+    text-transform: uppercase;
+}
+
 .card p {
     display: block;
     padding: 10px 20px;
@@ -50,6 +54,10 @@
     background-color: #333333;
     border-radius: 5px;
     cursor: pointer;
+}
+
+.card.hide {
+    display: none;
 }
 
 
@@ -114,19 +122,19 @@
     cursor: auto;
     display: flex;
     align-items: center;
-    justify-content: space-between;
     flex-direction: column;
     padding: 30px;
     flex: 50%;
     border-radius: 5px;
     background-color: white;
-    max-width: 700px;
+    max-width: 1000px;
     height: 600px;
     border: 1px solid #ccc;
     box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
 }
 
 #popup .header-popup {
+    margin-bottom: 20px;
     display: flex;
     align-items: center;
     font-weight: 700;
@@ -164,50 +172,177 @@
 }
 
 #popup .btn-buy {
+    margin-top: 20px;
     border-radius: 5px;
     border: 0;
     background: green;
     padding: 20px;
     min-width: 300px;
-    margin: 0 auto;
     color: white;
     font-weight: 700;
     font-size: 32px;
     cursor: pointer;
 }
 
-/*INFO BUY*/
+/*FORM*/
+#order-form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+}
 
-.container-buy_info {
-    max-width: 500px;
-    font-size: 30px;
-    position: fixed;
-    padding: 50px;
-    bottom: 30px;
-    left: 30px;
-    color: white;
+label {
+    display: block;
+    /*max-width: 600px;*/
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 2px;
     border-radius: 5px;
-    background: rgba(0, 0, 0, 0.75);
+    border: 1px solid #6c6c6c;
 }
 
-@media only screen and (max-width: 555px) {
-    #popup .content-popup {
-        flex-wrap: wrap;
-        align-items: center;
-        justify-content: center;
-    }
+.btn-submit {
+    display: inline-block;
+    width: 200px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4CAF50;
+    color: #fff;
+    cursor: pointer;
 }
 
+.btn-submit:hover {
+    background-color: #3e8e41;
+}
 
-.hide {
+.btn-close-form {
+    padding: 10px;
+    border-radius: 5px;
+    background: #333333;
+    color: white;
+    cursor: pointer;
+}
+
+.btn-count {
+    border-radius: 50%;
+    background-color: rgba(51, 51, 51, 0.75);
+    color: white;
+    display: inline-block;
+    padding: 5px;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 36px;
+    border: green;
+    user-select: none;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 28px;
+}
+
+.btn-count:hover {
+    background-color: rgba(0, 0, 0, 0.75);
+}
+
+.btn-count:active {
+    background-color: rgba(51, 51, 51, 0.75);
+}
+
+#quantity {
+    display: inline-block;
+    background: #cccccc;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 10px 10px 10px 40px;
+    color: black;
+    font-size: 28px;
+    font-weight: bold;
+    width: 50px;
+    margin: 0 20px;
+
+}
+
+#quantity[type="number"]::-webkit-outer-spin-button,
+#quantity[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+#quantity[type='number'],
+#quantity[type="number"]:hover,
+#quantity[type="number"]:focus {
+    appearance: none;
+    -moz-appearance: textfield;
+}
+
+#order-form label p {
     display: none;
 }
 
-span {
-    display: flex;
-    align-items: center;
-    font-size: 28px;
-    padding:  20px;
-    color: black;
-    background-color: #cccccc;
+#order-form label p.show {
+    color: red;
+    margin: 0;
+    display: block;
 }
+
+
+.popup-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f7f7f7;
+    padding: 10px;
+    border-radius: 5px 5px 0 0;
+}
+
+
+.popup-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 0 0 5px 5px;
+    text-align: center;
+}
+
+.popup-content p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+
+
+.popup-content p.price {
+    display: inline-block;
+    padding: 20px;
+    font-size: 24px;
+    background-color: green;
+    border-radius: 5px;
+    color: #fff;
+    font-weight: 700;
+}
+.popup-content p.total {
+    display: inline-block;
+    padding: 20px;
+    font-size: 24px;
+    background-color: green;
+    border-radius: 5px;
+    color: #fff;
+    font-weight: 700;
+}
+
+#checkAgree {
+    width: 30px;
+}
+
+#checkAgree:checked ~ span {
+    color: blue;
+}
+
+#checkAgree span{
+    display: flex;
+    text-align: center;
+    vertical-align: center;
+}
+

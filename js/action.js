@@ -1,22 +1,7 @@
 const ACTION = {
-	buy (title, image) {
+ closeInfo (handleCLick) {
 		ROOT_POPUP.className = ''
-		ROOT_BUY_INFO.innerHTML = `
-			<div class="container-buy_info">
-			<div style="display: flex">
-				<div>Ви купили - ${title}</div>
-				<div class="close" data-action="close" style="background: #fff; padding: 20px; color: #333333; border-radius: 5px;">X</div>
-			</div>
-			<img src="${image}" alt="${title}" width="150px">
- 			
- 			Покупака успешна! 🥳🤩
- 		
-			</div>
-		`
-	},
-	close () {
-		ROOT_POPUP.className = ''
-		ROOT_BUY_INFO.innerHTML = ''
+		ROOT_POPUP.removeEventListener("click", handleCLick);
 	},
 	remove (input) {
 		input.value = ''
@@ -31,6 +16,23 @@ const ACTION = {
 			el.innerHTML = el.innerText
 			el.classList.remove('hide')
 		})
+	},
+	pros (count, price) {
+		ACTION.count = ++count;
+		ACTION.updateTotal(count, price);
+
+	},
+
+	cons (count, price) {
+		if (count > 1) {
+			count--;
+			ACTION.updateTotal(count, price);
+		}
+	},
+
+	updateTotal (count, price) {
+		document.getElementById("price").textContent = (count * price).toFixed(1).toString();
+		document.getElementById("quantity").value = count;
 	}
 
 }
