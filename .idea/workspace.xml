@@ -1,0 +1,403 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="03f914af-24af-4fc2-8be8-a81af3482571" name="Changes" comment="HW-18 Promise">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/Slobodianiuk-FE-pro-27.12.22.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_11_04_2023,_22_03_[Changes]/shelved.patch" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_11_04_2023,_22_03_[Changes]1/shelved.patch" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_12_03_2023,_15_38_[Changes]/shelved.patch" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_12_03_2023,_15_38_[Changes]1/shelved.patch" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_12_03_2023__15_38__Changes_.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_27_02_2023,_01_13_[Changes]/shelved.patch" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_27_02_2023,_01_13_[Changes]1/shelved.patch" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_27_02_2023__01_13__Changes_.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/watcherTasks.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vite/deps_temp_447a865b/package.json" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+        <option value="JavaScript File" />
+        <option value="SCSS File" />
+        <option value="TypeScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="HW-19" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="SOFT" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="b5e82d5d-4ab9-4511-b7cc-c4b2be868853" />
+        <option name="url" value="https://github.com/Slobodianiuk1/Slobodianiuk-FE-pro-27.12.22.git" />
+      </UrlAndAccount>
+    </option>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2JW1IVitfjDePWBoCrTV46gLS6h" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "/Users/vladislavslobodanuk/Documents/hillel/Slobodianiuk-FE-pro-27.12.22",
+    "list.type.of.created.stylesheet": "SCSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "prettierjs.PrettierConfiguration.Package": "/Users/vladislavslobodanuk/Documents/hillel/Slobodianiuk-FE-pro-27.12.22/node_modules/prettier",
+    "settings.editor.selected.configurable": "editing.templates",
+    "ts.external.directory.path": "/Users/vladislavslobodanuk/Documents/hillel/Slobodianiuk-FE-pro-27.12.22/node_modules/typescript/lib",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/functions " />
+      <recent name="$PROJECT_DIR$/src/functions /searchPost" />
+      <recent name="$PROJECT_DIR$" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="03f914af-24af-4fc2-8be8-a81af3482571" name="Changes" comment="" />
+      <created>1672178945589</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1672178945589</updated>
+      <workItem from="1672178946688" duration="1174000" />
+      <workItem from="1672432570975" duration="13569000" />
+      <workItem from="1673084778117" duration="35010000" />
+      <workItem from="1673188557553" duration="686000" />
+      <workItem from="1673208344361" duration="4256000" />
+      <workItem from="1673445566177" duration="22445000" />
+      <workItem from="1673702184671" duration="58667000" />
+      <workItem from="1674636839011" duration="19357000" />
+      <workItem from="1675501247709" duration="13745000" />
+      <workItem from="1675847456814" duration="40606000" />
+      <workItem from="1677079249428" duration="6000" />
+      <workItem from="1677137492244" duration="1138000" />
+      <workItem from="1677143972435" duration="12308000" />
+      <workItem from="1677314050108" duration="1506000" />
+      <workItem from="1677326078425" duration="17000" />
+      <workItem from="1677411791736" duration="30601000" />
+      <workItem from="1677446150870" duration="5829000" />
+      <workItem from="1677453194697" duration="1382000" />
+      <workItem from="1677526410388" duration="20297000" />
+      <workItem from="1678628309627" duration="16947000" />
+      <workItem from="1678653568547" duration="39559000" />
+      <workItem from="1678912491349" duration="13710000" />
+      <workItem from="1678987773527" duration="2000" />
+      <workItem from="1678997015864" duration="38483000" />
+      <workItem from="1679130162403" duration="597000" />
+      <workItem from="1679134381241" duration="11112000" />
+      <workItem from="1680017484730" duration="8000" />
+      <workItem from="1680036043561" duration="1903000" />
+      <workItem from="1680038008514" duration="31343000" />
+      <workItem from="1680340296044" duration="357000" />
+      <workItem from="1680598860316" duration="1502000" />
+      <workItem from="1680626421860" duration="1521000" />
+      <workItem from="1681044504416" duration="33000" />
+    </task>
+    <task id="LOCAL-00001" summary="add HW-2 (Hello user)">
+      <created>1672433580269</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1672433580269</updated>
+    </task>
+    <task id="LOCAL-00002" summary="add HW-3 (Numbers and lines)">
+      <created>1672439578787</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1672439578787</updated>
+    </task>
+    <task id="LOCAL-00003" summary="add HW-4 (Create a small survey)">
+      <created>1672475185881</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1672475185881</updated>
+    </task>
+    <task id="LOCAL-00004" summary="add HW-5 (Calculator)">
+      <created>1673174495710</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1673174495710</updated>
+    </task>
+    <task id="LOCAL-00005" summary="add HW-5 (Check for an integer number)">
+      <created>1673175630628</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1673175630628</updated>
+    </task>
+    <task id="LOCAL-00006" summary="add HW-5 (Check for random spaces)">
+      <created>1673258755673</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1673258755673</updated>
+    </task>
+    <task id="LOCAL-00007" summary="add HW-6 (User portrait)">
+      <created>1673521967162</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1673521967162</updated>
+    </task>
+    <task id="LOCAL-00008" summary="add HW-6 (User portrait fix function capitalize)">
+      <created>1673522766556</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1673522766556</updated>
+    </task>
+    <task id="LOCAL-00009" summary="add HW-6 (User portrait fix function capitalize)">
+      <created>1673532349028</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1673532349028</updated>
+    </task>
+    <task id="LOCAL-00010" summary="add HW-7 (Complex cycles)">
+      <created>1673798252562</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1673798252562</updated>
+    </task>
+    <task id="LOCAL-00011" summary="add HW-8 (Array search)">
+      <created>1674483593798</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1674483593798</updated>
+    </task>
+    <task id="LOCAL-00012" summary="add HW-9 (add function 'removeElement')">
+      <created>1674640027600</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1674640027600</updated>
+    </task>
+    <task id="LOCAL-00013" summary="add HW-10 (add function 'generateKey')">
+      <created>1674665590385</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1674665590385</updated>
+    </task>
+    <task id="LOCAL-00014" summary="add HW-10 (add function 'generateKey')">
+      <created>1674665741933</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1674665741933</updated>
+    </task>
+    <task id="LOCAL-00015" summary="add HW-11 (add function recursion 'pow')">
+      <created>1675520994966</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1675520994966</updated>
+    </task>
+    <task id="LOCAL-00016" summary="add HW-12 (add function 'sum')">
+      <created>1675525389492</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1675525389492</updated>
+    </task>
+    <task id="LOCAL-00017" summary="add HW-13 (add function)">
+      <created>1676280600365</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1676280600365</updated>
+    </task>
+    <task id="LOCAL-00018" summary="HW-14 (add class Student &amp; Init student1, student2, student3 )">
+      <created>1677169573285</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1677169573285</updated>
+    </task>
+    <task id="LOCAL-00019" summary="HW-15 (todo list)">
+      <created>1677431996956</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1677431996956</updated>
+    </task>
+    <task id="LOCAL-00020" summary="HW-15 (refactoring, fixing code)">
+      <created>1677440651539</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1677440651539</updated>
+    </task>
+    <task id="LOCAL-00021" summary="HW-15 (refactoring, fixing code)">
+      <created>1677445245658</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1677445245658</updated>
+    </task>
+    <task id="LOCAL-00022" summary="HW-15 (Code Review)">
+      <created>1677445595788</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1677445595788</updated>
+    </task>
+    <task id="LOCAL-00023" summary="HW-15 (fix bag &amp; add localStorage)">
+      <created>1677588865788</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1677588865788</updated>
+    </task>
+    <task id="LOCAL-00024" summary="HW-15 (add readme file)">
+      <created>1677589236157</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1677589236157</updated>
+    </task>
+    <task id="LOCAL-00025" summary="updated file structure">
+      <created>1678628744193</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1678628744193</updated>
+    </task>
+    <task id="LOCAL-00026" summary="HW-16">
+      <created>1678814446047</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1678814446047</updated>
+    </task>
+    <task id="LOCAL-00027" summary="HW-16 fix css">
+      <created>1678814945170</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1678814945170</updated>
+    </task>
+    <task id="LOCAL-00028" summary="HW-17 add form validation">
+      <created>1679149112880</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1679149112880</updated>
+    </task>
+    <task id="LOCAL-00029" summary="HW-18 Promise">
+      <created>1680104549749</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1680104549749</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="HW-15" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="add HW-3 (Numbers and lines)" />
+    <MESSAGE value="add HW-4 (Create a small survey)" />
+    <MESSAGE value="add HW-5 (Calculator)" />
+    <MESSAGE value="add HW-5 (Check for an integer number)" />
+    <MESSAGE value="add HW-5 (Check for random spaces)" />
+    <MESSAGE value="add HW-6 (User portrait)" />
+    <MESSAGE value="add HW-6 (User portrait fix function capitalize)" />
+    <MESSAGE value="add HW-7 (Complex cycles)" />
+    <MESSAGE value="add HW-8 (Array search)" />
+    <MESSAGE value="add HW-9 (add function 'removeElement')" />
+    <MESSAGE value="add HW-10 (add function 'generateKey')" />
+    <MESSAGE value="add HW-11 (add function recursion 'pow')" />
+    <MESSAGE value="add HW-12 (add function 'sum')" />
+    <MESSAGE value="add HW-13 (add function)" />
+    <MESSAGE value="HW-14 (add class Student &amp; Init student1, student2, student3 )" />
+    <MESSAGE value="HW-15 (todo list)" />
+    <MESSAGE value="HW-15 (refactoring, fixing code)" />
+    <MESSAGE value="HW-15 (Code Review)" />
+    <MESSAGE value="HW-15 (fix bag &amp; add localStorage)" />
+    <MESSAGE value="HW-15 (add readme file)" />
+    <MESSAGE value="updated file structure" />
+    <MESSAGE value="HW-16" />
+    <MESSAGE value="HW-16 fix css" />
+    <MESSAGE value="HW-17 add form validation" />
+    <MESSAGE value="HW-18 Promise" />
+    <option name="LAST_COMMIT_MESSAGE" value="HW-18 Promise" />
+  </component>
+</project>
