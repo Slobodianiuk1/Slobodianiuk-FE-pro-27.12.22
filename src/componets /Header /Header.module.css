@@ -1,0 +1,29 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background: rgba(79, 78, 78, 0.91);
+  border-radius: 10px;
+}
+
+.logo {
+  font-size: 42px;
+  color: #535bf2;
+  font-weight: 700;
+}
+
+.buttons {
+  display: flex;
+  gap: 40px;
+}
+
+.button {
+  color: #535bf2;
+  font-size: 20px;
+  font-weight: 500;
+  background: none;
+  border: none;
+}
+
+/*# sourceMappingURL=Header.module.css.map */
