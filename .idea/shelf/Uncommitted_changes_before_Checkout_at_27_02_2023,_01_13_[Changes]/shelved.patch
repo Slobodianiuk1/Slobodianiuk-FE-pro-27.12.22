@@ -1,0 +1,174 @@
+Index: index.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><!DOCTYPE html>\n<html lang=\"en\">\n<head>\n\t<meta charset=\"UTF-8\">\n\t<title>Title</title>\n\t<link rel=\"stylesheet\" href=\"./css/style.css\">\n</head>\n<body>\n<main>\n\t<section>\n\t\t<div class=\"container\">\n\t\t\t<form>\n\t\t\t\t<input type=\"text\" placeholder=\"Enter text\" id=\"newItemInput\" oninput=\"handlerChengeInput()\">\n\t\t\t\t<div class=\"button-block\">\n\t\t\t\t\t<button class=\"button add-button button-disabled\"\n\t\t\t\t\t\t\tid=\"addButton\"\n\t\t\t\t\t\t\tonclick=\"addButtonClicked(event)\"\n\t\t\t\t\t\t\tdisabled=\"disabled\"\n\t\t\t\t\t>\n\t\t\t\t\t\tAdd\n\t\t\t\t\t</button>\n\t\t\t\t\t<button class=\"button remove-button button-disabled\" id=\"removeButton\"\n\t\t\t\t\t\t\tonclick=\"removeButtonClicked(event)\"\n\t\t\t\t\t\t\tdisabled=\"disabled\">\n\t\t\t\t\t\tRemove\n\t\t\t\t\t</button>\n\t\t\t\t</div>\n\t\t\t</form>\n\t\t\t<ul id=\"list\"></ul>\n\t\t\t<div class=\"container-block\">\n\t\t\t\t<div id=\"count-list\">\n\t\t\t\t\tList is empty\n\t\t\t\t</div>\n\t\t\t\t<div>\n\t\t\t\t\t<button class=\"deleteIsCompleted button-disabled\"\n\t\t\t\t\t\t\tonclick=\"checkIsCompleted()\"\n\t\t\t\t\t\t\tdisabled=\"disabled\"\n\t\t\t\t\t>Selected to delete\n\t\t\t\t\t</button>\n\t\t\t\t\t<button class=\"delete-all button-disabled\"\n\t\t\t\t\t\t\tonclick=\"deleteAll()\"\n\t\t\t\t\t\t\tdisabled=\"disabled\">Delete all\n\t\t\t\t\t</button>\n\t\t\t\t</div>\n\n\t\t\t</div>\n\t\t</div>\n\t</section>\n</main>\n<script src=\"./js/script.js\"></script>\n</body>\n</html>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/index.html b/index.html
+--- a/index.html	
++++ b/index.html	
+@@ -14,13 +14,13 @@
+ 				<div class="button-block">
+ 					<button class="button add-button button-disabled"
+ 							id="addButton"
+-							onclick="addButtonClicked(event)"
++							onclick="addItem(event)"
+ 							disabled="disabled"
+ 					>
+ 						Add
+ 					</button>
+ 					<button class="button remove-button button-disabled" id="removeButton"
+-							onclick="removeButtonClicked(event)"
++							onclick="removeItem(event)"
+ 							disabled="disabled">
+ 						Remove
+ 					</button>
+Index: js/script.js
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>const tasks = [\n\t{id: 1, title: 'Task 1', completed: false},\n\t{id: 2, title: 'Task 2', completed: true},\n];\n\n\nfunction renderList () {\n\ttasks.forEach(el => {\n\t\tconst list = document.getElementById(\"list\");\n\t\t// const inputValue = document.getElementById('newItemInput').value.trim();\n\n\t\tconst newItem = document.createElement(\"li\");\n\t\tnewItem.textContent = el.title;\n\t\tnewItem.classList.add('added-item');\n\n\t\tlist.appendChild(newItem);\n\n\t\tnewItem.addEventListener('click', function () {\n\t\t\tthis.classList.toggle('selected-item');\n\t\t\tcheckListLength()\n\t\t});\n\t})\n}\n\nrenderList()\n\nclass Task {\n\tconstructor(id, title, completed = false) {\n\t\tthis.id = id;\n\t\tthis.title = title;\n\t\tthis.completed = completed;\n\t}\n\n\ttoggleCompleted() {\n\t\tthis.completed = !this.completed;\n\t}\n}\nfunction addItem () {\n\tconst inputValue = document.getElementById('newItemInput').value.trim();\n\tlet task = new Task\n\ttasks.push[...]\n}\n\nfunction addButtonClicked (event) {\n\tevent.preventDefault();\n\n\tconst list = document.getElementById(\"list\");\n\tconst inputValue = document.getElementById('newItemInput').value.trim();\n\n\tif (!inputValue) return;\n\n\tconst newItem = document.createElement(\"li\");\n\tnewItem.textContent = inputValue;\n\tnewItem.classList.add('added-item');\n\n\tlist.appendChild(newItem);\n\n\tnewItem.addEventListener('click', function () {\n\t\tthis.classList.toggle('selected-item');\n\t\tcheckListLength()\n\t});\n\n\tdocument.getElementById('newItemInput').value = '';\n\n\tcheckListLength();\n\thandlerChengeInput();\n}\n\nfunction removeButtonClicked (event) {\n\tevent.preventDefault();\n\tconst lastItem = document.getElementById(\"list\").lastChild;\n\tlastItem && lastItem.remove();\n\n\tcheckListLength();\n}\n\nfunction checkListLength () {\n\tconst list = document.getElementById(\"list\");\n\tconst countList = list.children.length;\n\tconst removeButton = document.getElementById(\"removeButton\");\n\tconst deleteButton = document.querySelector('.delete-all');\n\tconst selectedDelete = document.querySelector('.deleteIsCompleted');\n\n\tconst setDisabled = (button, isDisabled) => {\n\t\tbutton.disabled = isDisabled;\n\t\tbutton.classList.toggle('button-disabled', isDisabled);\n\t};\n\n\tsetDisabled(removeButton, countList <= 0);\n\tsetDisabled(deleteButton, countList <= 0);\n\tsetDisabled(selectedDelete, countList <= 0 || !list.querySelector('.selected-item'));\n\tdocument.getElementById('count-list').textContent = countList ? `Total: ${countList}` : `List is empty`;\n}\n\nfunction deleteAll () {\n\tdocument.getElementById('list').innerHTML = '';\n\tcheckListLength();\n}\n\nfunction handlerChengeInput () {\n\tconst input = document.getElementById('newItemInput');\n\tconst addButton = document.getElementById('addButton');\n\taddButton.disabled = addButton.classList.toggle('button-disabled', !input.value);\n}\n\nfunction checkIsCompleted () {\n\tconst list = document.getElementById('list');\n\tconst selectedItems = [...list.querySelectorAll('.selected-item')];\n\n\tselectedItems.forEach(el => el.remove());\n\tcheckListLength();\n}\n\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/js/script.js b/js/script.js
+--- a/js/script.js	
++++ b/js/script.js	
+@@ -1,82 +1,37 @@
+-const tasks = [
+-	{id: 1, title: 'Task 1', completed: false},
+-	{id: 2, title: 'Task 2', completed: true},
+-];
+-
+-
+-function renderList () {
+-	tasks.forEach(el => {
+-		const list = document.getElementById("list");
+-		// const inputValue = document.getElementById('newItemInput').value.trim();
+-
+-		const newItem = document.createElement("li");
+-		newItem.textContent = el.title;
+-		newItem.classList.add('added-item');
+-
+-		list.appendChild(newItem);
+-
+-		newItem.addEventListener('click', function () {
+-			this.classList.toggle('selected-item');
+-			checkListLength()
+-		});
+-	})
+-}
+-
+-renderList()
++const tasks = [];
+ 
+ class Task {
+-	constructor(id, title, completed = false) {
+-		this.id = id;
++	constructor (title, completed = false) {
+ 		this.title = title;
+ 		this.completed = completed;
+ 	}
+-
+-	toggleCompleted() {
+-		this.completed = !this.completed;
+-	}
+-}
+-function addItem () {
+-	const inputValue = document.getElementById('newItemInput').value.trim();
+-	let task = new Task
+-	tasks.push[...]
+ }
+ 
+-function addButtonClicked (event) {
+-	event.preventDefault();
++function renderList () {
+ 
+ 	const list = document.getElementById("list");
+-	const inputValue = document.getElementById('newItemInput').value.trim();
++	list.innerHTML = ``
+ 
+-	if (!inputValue) return;
+-
+-	const newItem = document.createElement("li");
+-	newItem.textContent = inputValue;
+-	newItem.classList.add('added-item');
++	tasks.forEach(el => {
++		console.log(el);
++		const newItem = document.createElement("li");
++		newItem.textContent = el.title;
++		newItem.classList.add('added-item');
+ 
+-	list.appendChild(newItem);
+-
+-	newItem.addEventListener('click', function () {
+-		this.classList.toggle('selected-item');
+-		checkListLength()
+-	});
+-
+-	document.getElementById('newItemInput').value = '';
+-
+-	checkListLength();
+-	handlerChengeInput();
+-}
+-
+-function removeButtonClicked (event) {
+-	event.preventDefault();
+-	const lastItem = document.getElementById("list").lastChild;
+-	lastItem && lastItem.remove();
+-
+-	checkListLength();
++		list.appendChild(newItem);
++		newItem.addEventListener('click', function () {
++			el.completed = !el.completed;
++			newItem.className = el.completed ? 'added-item selected-item' : 'added-item';
++			checkListLength();
++		});
++
++
++	})
+ }
+ 
+ function checkListLength () {
+ 	const list = document.getElementById("list");
+-	const countList = list.children.length;
++	const countList = tasks.length;
+ 	const removeButton = document.getElementById("removeButton");
+ 	const deleteButton = document.querySelector('.delete-all');
+ 	const selectedDelete = document.querySelector('.deleteIsCompleted');
+@@ -92,8 +47,34 @@
+ 	document.getElementById('count-list').textContent = countList ? `Total: ${countList}` : `List is empty`;
+ }
+ 
++function addItem (event) {
++	event.preventDefault();
++
++	const input = document.getElementById('newItemInput');
++	const title = input.value.trim();
++
++	if (title !== '') {
++		let task = new Task(title);
++		tasks.push({...task});
++
++		input.value = '';
++		handlerChengeInput()
++		renderList();
++		checkListLength();
++	}
++}
++
++function removeItem (event) {
++	event.preventDefault();
++	tasks.length && tasks.pop()
++	renderList()
++	checkListLength();
++}
++
++
+ function deleteAll () {
+-	document.getElementById('list').innerHTML = '';
++	tasks.splice(0, tasks.length);
++	renderList();
+ 	checkListLength();
+ }
+ 

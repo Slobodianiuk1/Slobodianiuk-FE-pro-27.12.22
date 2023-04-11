@@ -1,0 +1,15 @@
+Index: src/functions /searchPost/api/repository.ts
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import {instance} from \"../../../axios\";\nimport {IApiProps, } from \"./dto\";\n\n\nexport const postApi = async ({id} : IApiProps): Promise<any> => {\n    try {\n        const response = await instance.get(`/posts/${id}`)\n        return response.data\n    } catch (error) {\n        console.log(error)\n    }\n}\n\n\n\n
+===================================================================
+diff --git a/src/functions /searchPost/api/repository.ts b/src/functions /searchPost/api/repository.ts
+--- a/src/functions /searchPost/api/repository.ts	
++++ b/src/functions /searchPost/api/repository.ts	
+@@ -1,5 +1,5 @@
+ import {instance} from "../../../axios";
+-import {IApiProps, } from "./dto";
++import {IApiProps} from "./dto";
+ 
+ 
+ export const postApi = async ({id} : IApiProps): Promise<any> => {
