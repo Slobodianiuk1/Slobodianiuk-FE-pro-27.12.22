@@ -1,11 +1,11 @@
 import React, {FC} from 'react';
 import styles from './Index.module.css';
 
-interface IWinnerBox {
+interface IWinnerBoxProps {
   winners: string[];
 }
 
-const WinnerBox: FC<IWinnerBox> = ({winners}: IWinnerBox): JSX.Element => {
+const WinnerBox: FC<IWinnerBoxProps> = ({winners})=> {
   return (
     <div className={styles.box}>
       emojis won:

@@ -2,19 +2,12 @@ import { FC, useState } from 'react';
 import Emoji from '../Emoji/Index';
 import WinnerBox from '../WinnerBox/Index';
 import styles from './Index.module.css';
+import {emojiData} from "../../emojiData.mock";
+import {IEmojiData} from "../../types/types";
 
-const Post: FC = (): JSX.Element => {
+const Post: FC = () => {
   const [isInfo, setIsInfo] = useState<boolean>(false);
-  const [emoji, setEmoji] = useState({
-    emojiList: [
-      { id: 1, emoji: '💪', count: 0 },
-      { id: 2, emoji: '🤯', count: 0 },
-      { id: 3, emoji: '🚀', count: 0 },
-      { id: 4, emoji: '😇', count: 0 },
-      { id: 5, emoji: '👍', count: 0 },
-    ],
-    winners: [''],
-  });
+  const [emoji, setEmoji] = useState<IEmojiData>(emojiData);
 
   const listEmoji = emoji.emojiList;
   const winners = emoji.winners;
@@ -40,8 +33,6 @@ const Post: FC = (): JSX.Element => {
       setEmoji({ ...emoji, winners: [...winners] });
     }
   };
-
-  const disable = isInfo ? 'disable' : '';
 
   return (
     <div>
