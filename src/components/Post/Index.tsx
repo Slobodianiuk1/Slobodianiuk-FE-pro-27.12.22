@@ -34,6 +34,8 @@ const Post: FC = () => {
     }
   };
 
+  const disable = isInfo ? 'disable' : '';
+
   return (
     <div>
       <h2>Choose your favorite smiley:</h2>

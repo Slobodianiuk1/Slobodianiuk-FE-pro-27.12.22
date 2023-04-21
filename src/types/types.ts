@@ -8,6 +8,7 @@ export interface IPropsEmoji extends IEmoji {
   onClick: (id: number) => void;
   disabled: boolean;
 }
+
 export interface IEmojiData {
     emojiList: IEmoji[]
     winners: string[]
