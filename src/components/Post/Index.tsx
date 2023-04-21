@@ -41,6 +41,8 @@ const Post: FC = (): JSX.Element => {
     }
   };
 
+  const disable = isInfo ? 'disable' : '';
+
   return (
     <div>
       <h2>Choose your favorite smiley:</h2>
@@ -51,6 +53,7 @@ const Post: FC = (): JSX.Element => {
             id={id}
             emoji={emoji}
             count={count}
+            disabled={isInfo}
             onClick={handleEmojiClick}
           />
         ))}
