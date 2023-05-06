@@ -1,4 +1,4 @@
-import { FC } from 'react';
+import React, { FC } from 'react';
 import clsx from 'clsx';
 import { ACTIONS, IReducerAction } from '../../../store/reducer';
 import { IParams } from '../../../types/hamburger';
