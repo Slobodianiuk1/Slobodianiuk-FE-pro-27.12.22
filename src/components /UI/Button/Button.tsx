@@ -1,23 +1,25 @@
-import React, {FC} from "react";
-import clsx from "clsx";
-import {ACTIONS, IReducerAction} from "../../../store/reducer.ts";
-import {IParams} from "../../../types/hamburger.ts";
+import { FC } from 'react';
+import clsx from 'clsx';
+import { ACTIONS, IReducerAction } from '../../../store/reducer';
+import { IParams } from '../../../types/hamburger';
 
 interface IButtonProps {
-  payload: IParams
-  dispatchFunk:React.Dispatch<IReducerAction>
-  type: ACTIONS
+  payload: IParams;
+  dispatchFun: React.Dispatch<IReducerAction>;
+  type: ACTIONS;
 }
 
-const Button: FC<IButtonProps> = ({ payload, dispatchFunk, type,}) => {
-  const styleBtn = (isChecked:boolean): string => clsx('rounded p-3 basis-1/2 bg-fuchsia-900', {
-    'bg-fuchsia-400': isChecked
-  })
+const Button: FC<IButtonProps> = ({ payload, dispatchFun, type }) => {
+  const styleBtn = (isChecked: boolean): string =>
+    clsx('rounded p-3 w-full', {
+      'bg-fuchsia-600': isChecked,
+      'bg-fuchsia-900': !isChecked,
+    });
 
   return (
     <button
       className={styleBtn(payload.isChecked)}
-      onClick={() => dispatchFunk({type, payload})}
+      onClick={() => dispatchFun({ type, payload })}
     >
       {payload.name}
     </button>

@@ -1,10 +1,10 @@
-import {FC} from "react";
-import {Hamburger} from "./components /Hamburger/Hamburger.tsx";
+import { FC } from 'react';
+import { Hamburger } from './components /Hamburger/Hamburger';
 
 const App: FC = () => {
   return (
     <div>
-      <Hamburger/>
+      <Hamburger />
     </div>
   );
 };
