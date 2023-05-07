@@ -1,0 +1,16 @@
+{
+  "contacts": [
+    {
+      "id": 2,
+      "firstName": "Ervin",
+      "lastName": "Howell",
+      "tel": "+380 96 543 23 09"
+    },
+    {
+      "id": 5,
+      "firstName": "Chelsey",
+      "lastName": "Dietrich",
+      "tel": "+380 96 313 54 32"
+    }
+  ]
+}
