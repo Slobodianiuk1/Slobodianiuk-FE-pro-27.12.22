@@ -1,7 +1,7 @@
 import {FC} from "react";
 import {AuthPage} from "./pages/auth";
 import {createBrowserRouter, RouterProvider} from "react-router-dom";
-import {HomePage} from "./pages/Home";
+import {HomePage} from "./pages/home";
 
 
 const router = createBrowserRouter([
