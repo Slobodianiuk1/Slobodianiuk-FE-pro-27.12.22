@@ -1,13 +1,25 @@
 import {FC} from "react";
+import {AuthPage} from "./pages/auth";
+import {createBrowserRouter, RouterProvider} from "react-router-dom";
+import {HomePage} from "./pages/Home";
 
-const App: FC = () => {
-    return (
-        <div>
-            <h1 className="text-3xl font-bold underline">
-                Hello world!
-            </h1>
-        </div>
-    );
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    Component: HomePage,
+  },
+  {
+    path: "login",
+    Component: AuthPage
+  },
+  {
+    path: "register",
+    Component: AuthPage
+  }
+
+])
+
+export const App: FC = () => {
+  return <RouterProvider router={router}/>;
 };
-
-export default App;
