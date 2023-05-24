@@ -2,16 +2,19 @@ import { FC } from 'react';
 import styles from './Todo.module.scss';
 import { RiDeleteBin2Line, RiTodoFill } from 'react-icons/ri';
 import { FaCheck } from 'react-icons/fa';
-import { ITodoProps } from '../../types/todo.type';
+import { ITodo } from '../../types/todo.type';
 import clsx from 'clsx';
+import {useAppDispatch} from "../../hooks";
+import {deleteTodo, isCompleted} from "../../store/slice/todos";
 
-const Todo: FC<ITodoProps> = ({
+const Todo: FC<ITodo> = ({
   id,
   completed,
   title,
-  toggleTodoHandler,
-  deleteTodoHandler,
 }) => {
+
+  const dispatch =  useAppDispatch()
+
   const todoCompletedStyle = clsx(
     completed && styles.completedTodo,
     styles.todo
@@ -23,11 +26,11 @@ const Todo: FC<ITodoProps> = ({
       <div className={styles.todoText}>{title}</div>
       <RiDeleteBin2Line
         className={styles.deleteIcon}
-        onClick={() => deleteTodoHandler(id)}
+        onClick={() => dispatch(deleteTodo(id))}
       />
       <FaCheck
         className={styles.checkIcon}
-        onClick={() => toggleTodoHandler(id)}
+        onClick={() => dispatch(isCompleted(id))}
       />
     </div>
   );

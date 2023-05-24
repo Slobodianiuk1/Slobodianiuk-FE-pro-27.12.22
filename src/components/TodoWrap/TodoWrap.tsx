@@ -1,21 +1,28 @@
-import { FC } from 'react';
+import {FC, useEffect} from 'react';
 import styles from './TodoWrap.module.scss';
 import Todo from '../Todo/Todo';
-import { ITodoWrapProps } from '../../types/todo.type';
+import {useAppDispatch, useAppSelector} from "../../hooks";
+import {getTodos} from "../../store/api/todos";
 
-const TodoWrap: FC<ITodoWrapProps> = ({
-  todoList,
-  toggleTodoHandler,
-  deleteTodoHandler,
-}) => {
+const TodoWrap: FC = () => {
+
+  useEffect(() => {
+    dispatch(getTodos(null))
+  }, [])
+
+  const dispatch = useAppDispatch()
+
+  const {todos, isError, isLoading} = useAppSelector(({todos}) => todos)
+
+  if(isLoading) return <div>Loading...</div>
+  if(isError) return <div>ERROR!!!</div>
+
   return (
     <div className={styles.container}>
-      {todoList.map((todo) => (
+      {todos.map((todo) => (
         <Todo
           key={todo.id}
           {...todo}
-          toggleTodoHandler={toggleTodoHandler}
-          deleteTodoHandler={deleteTodoHandler}
         />
       ))}
     </div>
